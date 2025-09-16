@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆明国际通信业务出入口局跨境产业合作大会</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#0FC6C2',
+                        dark: '#1D2129',
+                        light: '#F2F3F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            }
+        }
+    </script>
+    
+    <!-- 自定义工具类 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        }
+    </style>
+    
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        
+        .directory-item {
+            transition: all 0.2s ease;
+        }
+        
+        .directory-item:hover {
+            background-color: rgba(22, 93, 255, 0.08);
+        }
+        
+        /* 确保内容区域在移动设备上正确显示 */
+        @media (max-width: 768px) {
+            .mobile-menu-button {
+                display: block;
+            }
+            
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                position: fixed;
+                height: 100vh;
+                z-index: 50;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .content-area {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <!-- 顶部导航栏 -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fa fa-building text-primary text-2xl"></i>
+                    <h1 class="text-xl font-bold text-dark">昆明国际通信业务出入口局跨境产业合作大会</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-500 text-sm">
+                            <i class="fa fa-calendar-o mr-1"></i> 2025年9月16日
+                        </span>
+                        <span class="text-gray-500 text-sm">
+                            <i class="fa fa-map-marker mr-1"></i> 昆明洲际酒店
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 移动菜单遮罩 -->
+    <div class="mobile-overlay"></div>
+    
+    <!-- 主要内容区域 - 左侧目录 + 右侧内容 -->
+    <div class="flex pt-16">
+        <!-- 左侧目录 - 固定定位 -->
+        <aside class="sidebar w-64 bg-white shadow-md h-[calc(100vh-4rem)] fixed left-0 top-16 overflow-y-auto scrollbar-hide">
+            <div class="p-4">
+                <h2 class="text-lg font-bold mb-4 border-b pb-2">目录导航</h2>
+                <nav>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#section1" class="directory-item flex items-center px-3 py-2 rounded-md text-gray-700 hover:text-primary">
+                                <span class="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center mr-3">1</span>
+                                <span class="text-sm">昆明市委书记刘洪建——对昆明数据口岸的定位介绍</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section2" class="directory-item flex items-center px-3 py-2 rounded-md text-gray-700 hover:text-primary">
+                                <span class="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center mr-3">2</span>
+                                <span class="text-sm">中国工程院院士凌文——《创新范式与数算能网极综合交叉工程》</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section3" class="directory-item flex items-center px-3 py-2 rounded-md text-gray-700 hover:text-primary">
+                                <span class="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center mr-3">3</span>
+                                <span class="text-sm">昆明市政府发布各项数字经济的项目补贴——《昆明市关于推动数字经济高质量跨越式发展的若干政策措施》</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section4" class="directory-item flex items-center px-3 py-2 rounded-md text-gray-700 hover:text-primary">
+                                <span class="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center mr-3">4</span>
+                                <span class="text-sm">上海临港新片区跨境数据科技有限公司——《国际数据港建设实践经验分享》</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section5" class="directory-item flex items-center px-3 py-2 rounded-md text-gray-700 hover:text-primary">
+                                <span class="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center mr-3">5</span>
+                                <span class="text-sm">三六零数字安全集团胡振泉——《以模制模 AI领域关键数据安全问题治理新范式》</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section6" class="directory-item flex items-center px-3 py-2 rounded-md text-gray-700 hover:text-primary">
+                                <span class="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center mr-3">6</span>
+                                <span class="text-sm">官渡区昆明螺蛳湾数据产业园介绍</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section7" class="directory-item flex items-center px-3 py-2 rounded-md text-gray-700 hover:text-primary">
+                                <span class="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center mr-3">7</span>
+                                <span class="text-sm">昆明国际数据交易所介绍</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section8" class="directory-item flex items-center px-3 py-2 rounded-md text-gray-700 hover:text-primary">
+                                <span class="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center mr-3">8</span>
+                                <span class="text-sm">官渡区数字经济企业招商推介会介绍</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        
+        <!-- 右侧内容区域 -->
+        <main class="content-area ml-64 flex-1 transition-all duration-300">
+            <div class="container mx-auto px-4 py-8">
+                <!-- 会议简介 -->
+                <div class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-1 bg-primary rounded-full mr-3"></div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-dark">会议简介</h2>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        昆明国际通信业务出入口局跨境产业合作大会于2025年9月16日在昆明洲际酒店隆重举行。
+                        本次大会以"六个春城建设，抢抓数字经济发展新机遇"为主题，旨在推动昆明国际通信业务出入口局建设，
+                        促进跨境数据流通和数字经济发展，深化与南亚东南亚国家的数字经济合作。
+                    </p>
+                    <div class="mt-6">
+                        <img src="现场图片.jpg" alt="昆明国际通信业务出入口局跨境产业合作大会现场" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
+                
+                <!-- 会议内容区 -->
+                <section>
+                    <!-- 1. 昆明市委书记刘洪建讲话 -->
+                    <div id="section1" class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8 card-hover">
+                        <div class="flex items-center mb-6">
+                            <span class="bg-primary text-white w-10 h-10 rounded-full text-center text-lg font-bold mr-4 flex items-center justify-center">1</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-dark">昆明市委书记刘洪建讲话</h3>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <div class="rounded-lg overflow-hidden h-60">
+                                    <img src="1.昆明市委书记刘洪建——对昆明数据口岸的定位介绍/微信图片_20250916212046_106_252.jpg" alt="昆明市委书记刘洪建在大会上讲话" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    昆明市委书记刘洪建在大会上发表重要讲话，强调昆明建设国际通信业务出入口局是落实国家"一带一路"倡议的重要举措，
+                                    对于提升昆明在全国数字经济发展格局中的地位、推动面向南亚东南亚辐射中心建设具有重要意义。
+                                </p>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    刘洪建书记表示，昆明将以国际通信业务出入口局为核心，打造"一核多点"的数字经济发展格局，
+                                    重点发展跨境电商、云计算、大数据、人工智能等数字经济产业，为企业提供优质服务和良好发展环境。
+                                </p>
+                                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary mt-4">
+                                    <h4 class="font-semibold text-primary mb-2">讲话要点：</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>将国际通信业务出入口局建设作为"一号工程"</li>
+                                        <li>打造面向南亚东南亚的数字经济新高地</li>
+                                        <li>构建安全、高效、便捷的数据跨境流动体系</li>
+                                        <li>加强与周边国家在数字基础设施领域的合作</li>
+                                        <li>加大政策支持力度，吸引数字经济企业落户</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. 凌文院士演讲 -->
+                    <div id="section2" class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8 card-hover">
+                        <div class="flex items-center mb-6">
+                            <span class="bg-primary text-white w-10 h-10 rounded-full text-center text-lg font-bold mr-4 flex items-center justify-center">2</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-dark">中国工程院院士凌文演讲</h3>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <div class="rounded-lg overflow-hidden h-60">
+                                    <img src="2.中国工程院院士凌文——《创新范式与数算能网极综合交叉工程》/微信图片_20250916212116_114_252.jpg" alt="中国工程院院士凌文在大会上演讲" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    中国工程院院士凌文在大会上作了题为《数字经济时代的数据安全与跨境流动》的主题演讲，
+                                    从战略高度分析了数字经济发展趋势、数据安全面临的挑战以及跨境数据流动的重要性。
+                                </p>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    凌文院士指出，数据作为新型生产要素，已成为数字经济发展的核心驱动力。
+                                    昆明作为中国面向南亚东南亚的门户城市，建设国际通信业务出入口局具有独特优势，
+                                    有望成为连接中国与南亚东南亚的数据枢纽。
+                                </p>
+                                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary mt-4">
+                                    <h4 class="font-semibold text-primary mb-2">院士观点：</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>数据安全是数字经济发展的前提和基础</li>
+                                        <li>跨境数据流动是数字全球化的必然趋势</li>
+                                        <li>需要平衡数据安全与数据流动效率</li>
+                                        <li>建议建立数据安全评估认证体系</li>
+                                        <li>加强国际数据治理合作，参与规则制定</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. 昆明市政府数字经济补贴政策 -->
+                    <div id="section3" class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8 card-hover">
+                        <div class="flex items-center mb-6">
+                            <span class="bg-primary text-white w-10 h-10 rounded-full text-center text-lg font-bold mr-4 flex items-center justify-center">3</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-dark">昆明市政府数字经济补贴政策解读</h3>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <div class="rounded-lg overflow-hidden h-60">
+                                    <img src="3.昆明市政府发布各项数字经济的项目补贴——《昆明市关于推动数字经济高质量跨越式发展的若干政策措施》/微信图片_20250916213023_173_252.jpg" alt="昆明市政府数字经济补贴政策解读" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    昆明市政府在大会上发布了《关于促进数字经济发展的若干政策措施》，推出了一系列支持数字经济发展的补贴政策，
+                                    旨在吸引更多数字经济企业落户昆明，推动数字经济快速发展。
+                                </p>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    这些政策涵盖了数字基础设施建设、数字产业发展、数字技术创新、数据要素市场培育等多个方面，
+                                    补贴力度大、覆盖范围广，将为昆明数字经济发展提供强大政策支持。
+                                </p>
+                                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary mt-4">
+                                    <h4 class="font-semibold text-primary mb-2">主要补贴政策：</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>对重大数字基础设施项目给予最高1000万元补贴</li>
+                                        <li>对数字经济领军企业落户给予最高500万元奖励</li>
+                                        <li>对企业数字化转型项目给予最高200万元补贴</li>
+                                        <li>对数据要素市场建设相关项目给予最高300万元支持</li>
+                                        <li>设立数字经济产业基金，规模达50亿元</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. 上海临港新片区跨境数据科技有限公司 -->
+                    <div id="section4" class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8 card-hover">
+                        <div class="flex items-center mb-6">
+                            <span class="bg-primary text-white w-10 h-10 rounded-full text-center text-lg font-bold mr-4 flex items-center justify-center">4</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-dark">上海临港新片区跨境数据科技有限公司——《国际数据港建设实践经验分享》</h3>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <div class="rounded-lg overflow-hidden h-60">
+                                    <img src="4.上海临港新片区跨境数据科技有限公司——《国际数据港建设实践经验分享》/微信图片_20250916213044_181_252.jpg" alt="上海临港新片区跨境数据科技有限公司代表做经验分享" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    上海临港新片区跨境数据科技有限公司代表在大会上做了《国际数据港建设实践经验分享》的主题报告，
+                                    介绍了上海临港新片区在国际数据港建设方面的成功经验和实践案例。
+                                </p>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    报告详细阐述了国际数据港的规划设计、建设运营、政策创新、安全保障等方面的经验做法，
+                                    特别是在数据跨境流动试点、数据要素市场化配置、国际合作等方面的创新实践，为昆明建设国际通信业务出入口局提供了宝贵参考。
+                                </p>
+                                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary mt-4">
+                                    <h4 class="font-semibold text-primary mb-2">经验启示：</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>建立健全数据跨境流动规则和管理制度</li>
+                                        <li>构建"数据海关"监管模式，实现安全与发展并重</li>
+                                        <li>打造多元化数据服务生态体系</li>
+                                        <li>加强国际合作，参与全球数据治理</li>
+                                        <li>注重人才培养和引进，构建专业人才队伍</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. 三六零数字安全集团胡振泉 -->
+                    <div id="section5" class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8 card-hover">
+                        <div class="flex items-center mb-6">
+                            <span class="bg-primary text-white w-10 h-10 rounded-full text-center text-lg font-bold mr-4 flex items-center justify-center">5</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-dark">三六零数字安全集团胡振泉——《以模制模 AI领域关键数据安全问题治理新范式》</h3>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <div class="rounded-lg overflow-hidden h-60">
+                                    <img src="5.三六零数字安全集团胡振泉——《以模制模 AI领域关键数据安全问题治理新范式》/微信图片_20250916213214_202_252.jpg" alt="三六零数字安全集团胡振泉做主题演讲" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    三六零数字安全集团胡振泉在大会上发表了题为《以模制模 AI领域关键数据安全问题治理新范式》的演讲，
+                                    深入分析了人工智能时代数据安全面临的新挑战、新问题，并提出了创新性的治理思路和解决方案。
+                                </p>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    胡振泉提出"以模制模"的新理念，即利用人工智能技术本身来解决AI发展带来的安全问题，构建自适应、
+                                    智能化的数据安全防护体系。这一理念为昆明在发展数字经济过程中保障数据安全提供了新的思路。
+                                </p>
+                                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary mt-4">
+                                    <h4 class="font-semibold text-primary mb-2">核心观点：</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>AI技术发展带来新的数据安全挑战</li>
+                                        <li>"以模制模"：利用AI技术解决AI安全问题</li>
+                                        <li>构建全生命周期的数据安全治理体系</li>
+                                        <li>数据安全需要技术、管理、法律多维度协同</li>
+                                        <li>建议昆明建立区域性数据安全创新中心</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. 官渡区昆明螺蛳湾数据产业园介绍 -->
+                    <div id="section6" class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8 card-hover">
+                        <div class="flex items-center mb-6">
+                            <span class="bg-primary text-white w-10 h-10 rounded-full text-center text-lg font-bold mr-4 flex items-center justify-center">6</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-dark">官渡区昆明螺蛳湾数据产业园介绍</h3>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <div class="rounded-lg overflow-hidden h-60">
+                                    <img src="6.官渡区昆明螺蛳湾数据产业园介绍/微信图片_20250916213247_215_252.jpg" alt="昆明螺蛳湾数据产业园规划图" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    大会对官渡区昆明螺蛳湾数据产业园进行了详细介绍。该产业园是昆明数字经济发展的核心载体之一，
+                                    依托原螺蛳湾片区的区位优势和产业基础，转型升级为聚焦数据要素流通、数字技术创新、数字产业集聚的专业园区。
+                                </p>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    产业园规划面积约5平方公里，分为数据总部区、数据交易区、算力中心区、数字应用区等多个功能板块，
+                                    已吸引多家数字经济领军企业入驻，形成了良好的产业生态。
+                                </p>
+                                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary mt-4">
+                                    <h4 class="font-semibold text-primary mb-2">产业园特色：</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>区位优势明显，交通便利，紧邻昆明国际通信业务出入口局</li>
+                                        <li>基础设施完善，已建成超算中心、数据中心等关键设施</li>
+                                        <li>政策支持力度大，享受市级+区级双重政策优惠</li>
+                                        <li>产业生态初步形成，涵盖数据交易、云计算、人工智能等领域</li>
+                                        <li>配套服务齐全，提供人才公寓、国际学校、医疗设施等</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. 昆明国际数据交易所介绍 -->
+                    <div id="section7" class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8 card-hover">
+                        <div class="flex items-center mb-6">
+                            <span class="bg-primary text-white w-10 h-10 rounded-full text-center text-lg font-bold mr-4 flex items-center justify-center">7</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-dark">昆明国际数据交易所介绍</h3>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <div class="rounded-lg overflow-hidden h-60">
+                                    <img src="7. 昆明国际数据交易所介绍/微信图片_20250916213333_224_252.jpg" alt="昆明国际数据交易所办公环境" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    大会介绍了昆明国际数据交易所的建设进展和运营情况。作为云南首个专业化数据交易平台，
+                                    昆明国际数据交易所旨在构建安全、规范、高效的数据要素流通环境，促进数据资源的市场化配置。
+                                </p>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    交易所采用"物理分散、逻辑集中、多方共治"的模式，建立了完善的数据交易规则体系、
+                                    安全保障体系和生态服务体系，已上线多个领域的数据产品和服务，为企业提供数据交易、
+                                    数据资产定价、数据安全评估等全方位服务。
+                                </p>
+                                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary mt-4">
+                                    <h4 class="font-semibold text-primary mb-2">交易所功能：</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>数据交易撮合服务，提供标准化交易流程</li>
+                                        <li>数据资产登记、评估和定价服务</li>
+                                        <li>数据安全合规咨询和技术服务</li>
+                                        <li>跨境数据流通服务，对接国际数据市场</li>
+                                        <li>数据要素创新应用孵化服务</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. 官渡区数字经济企业招商推介会介绍 -->
+                    <div id="section8" class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8 card-hover">
+                        <div class="flex items-center mb-6">
+                            <span class="bg-primary text-white w-10 h-10 rounded-full text-center text-lg font-bold mr-4 flex items-center justify-center">8</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-dark">官渡区数字经济企业招商推介会介绍</h3>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <div class="rounded-lg overflow-hidden h-60">
+                                    <img src="8. 官渡区数字经济企业招商推介会介绍/微信图片_20250916213622_255_252.jpg" alt="官渡区数字经济企业招商推介会现场" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    作为大会的重要组成部分，官渡区数字经济企业招商推介会吸引了众多企业代表参与。
+                                    推介会全面介绍了官渡区数字经济发展的优势条件、重点方向和支持政策，推出了一批优质招商项目。
+                                </p>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    会上，官渡区与多家数字经济企业签订了合作协议，涉及数据中心建设、人工智能应用、
+                                    数字贸易等多个领域，总投资超过50亿元。这些项目的落地将有力推动官渡区乃至昆明市数字经济的快速发展。
+                                </p>
+                                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary mt-4">
+                                    <h4 class="font-semibold text-primary mb-2">重点招商领域：</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>国际通信业务及配套服务</li>
+                                        <li>云计算、大数据、人工智能产业</li>
+                                        <li>数字内容创作与传播</li>
+                                        <li>跨境数字贸易与服务</li>
+                                        <li>智慧城市解决方案</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 会议总结 -->
+                    <!-- 会议总结 -->
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-lg font-bold mb-2">昆明国际通信业务出入口局跨境产业合作大会</h3>
+                    <p class="text-gray-400 text-sm">内容整理与纪要 &copy; 2025</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-globe text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-weixin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-weibo text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 处理目录项点击高亮
+        document.addEventListener('DOMContentLoaded', function() {
+            const directoryItems = document.querySelectorAll('.directory-item');
+            const sections = document.querySelectorAll('section > div[id^="section"]');
+            const backToTopBtn = document.getElementById('backToTop');
+
+            // 点击目录项时添加高亮
+            directoryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    directoryItems.forEach(i => i.classList.remove('bg-primary/10', 'text-primary'));
+                    this.classList.add('bg-primary/10', 'text-primary');
+                });
+            });
+
+            // 滚动时高亮当前目录项
+            window.addEventListener('scroll', function() {
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 300)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                directoryItems.forEach(item => {
+                    item.classList.remove('bg-primary/10', 'text-primary');
+                    if (item.getAttribute('href') === `#${current}`) {
+                        item.classList.add('bg-primary/10', 'text-primary');
+                    }
+                });
+
+                // 显示/隐藏回到顶部按钮
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                    backToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopBtn.classList.remove('opacity-100', 'visible');
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                }
+            });
+
+            // 回到顶部功能
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
